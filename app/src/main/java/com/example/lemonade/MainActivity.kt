@@ -105,9 +105,8 @@ class MainActivity : AppCompatActivity() {
 
         // if statement block -> in one optimize code
         val nextImage: ImageView = findViewById(R.id.image_lemon_state)
-        val toast = Toast.makeText(this, "Great! keep going", Toast.LENGTH_SHORT)
-        toast.show()
-        if (lemonadeState == SELECT) {
+
+          if (lemonadeState == SELECT) {
             lemonadeState = SQUEEZE
             lemonSize = lemonTree.pick()
             squeezeCount = 0
@@ -124,6 +123,7 @@ class MainActivity : AppCompatActivity() {
             lemonadeState = SELECT
         }
         setViewElements()
+        showSnackbar()
     }
 
     private fun setViewElements() {
